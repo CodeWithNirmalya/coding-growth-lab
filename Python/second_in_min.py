@@ -1,0 +1,5 @@
+sec = int(input("Enter the details of the second: "))
+min = int(sec/60)
+min_sec = float(sec/60)
+print(min)
+print(min_sec)
