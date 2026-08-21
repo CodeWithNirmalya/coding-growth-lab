@@ -90,3 +90,20 @@ def deletefile():
             print(f"{name} is not exist in the system")
     except Exception as err:
         print(f"You have got an error {err}")
+
+
+print("Press 1 to create a new file")
+print("Press 2 to read your file")
+print("Press 3 to update your file")
+print("Press 4 to delete your file")
+ans = int(input("Enter your choice here to perform the tasks: "))
+
+if ans ==1:
+    createfile()
+elif ans ==2:
+    readfile()
+
+elif ans ==3:
+    updatefile()
+elif ans ==4:
+    deletefile()
