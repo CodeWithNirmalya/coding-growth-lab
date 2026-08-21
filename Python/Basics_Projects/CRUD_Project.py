@@ -41,3 +41,38 @@ def readfile():
             print(f'{name} - this file is not exist')
     except Exception as err:
         print(f"You have got an unexpected error: {err}")
+
+
+def updatefile():
+    try: 
+        fileandfolder()
+        name =input("Enter the name of your file: ")
+        p = Path(name)
+        if p.exists() and p.is_file():
+            print("Press 1 to change the name of your file: ")
+            print("Press 2 to rewrite the content of your file: ")
+            print("Press 3 to add some content in your file")
+
+            ans = int(input("Enter the choice from the above menu: "))
+
+            if ans ==1:
+                filename = input("Please enter the new name of your file: ")
+                p2 = Path(filename)
+                p.rename(p2)
+
+            elif ans ==2:
+                with open(p,'w') as f:
+                    data = input("Please enter the data for replace your old data: ")
+                    f.write(data)
+                print("The new data are succesfully replace your old data")
+            elif ans ==3:
+                with open(p,'a') as f:
+                    data = input("Please enter the data you wanna add in your file: ")
+                    f.write(" "+data)
+                print("New Data are added with your old content")
+            else:
+                print("Invalid output")
+        else:
+            print("File is not exist")
+    except Exception as err:
+        print(f"You have got an error {err}")
