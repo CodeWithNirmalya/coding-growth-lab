@@ -76,3 +76,17 @@ def updatefile():
             print("File is not exist")
     except Exception as err:
         print(f"You have got an error {err}")
+
+
+def deletefile():
+    try:
+        fileandfolder()
+        name = input("PLease enter the name of your file to delete : ")
+        p= Path(name)
+        if p.exists() and  p.is_file():
+            os.remove(p)
+            print("The file is deleted succesfully...!")
+        else:
+            print(f"{name} is not exist in the system")
+    except Exception as err:
+        print(f"You have got an error {err}")
