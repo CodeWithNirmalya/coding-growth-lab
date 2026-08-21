@@ -15,7 +15,7 @@ def createfile():
         fileandfolder()
         name = input("PLease enter your name of the file: ")
         p= Path(name)   
-        if not p.exists() and  p.is_file():
+        if not p.exists():
             with open(p,'w') as f:
                 data = input("What you want to write inside the file: ")
                 f.write(data)
