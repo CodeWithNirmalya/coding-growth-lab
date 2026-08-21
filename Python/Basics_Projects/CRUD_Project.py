@@ -25,3 +25,19 @@ def createfile():
             print("This file is already exist in system")
     except Exception as err:
         print(f"You have got an error {err}")
+
+# User can see the content of the file 
+def readfile():
+    try:
+        fileandfolder()
+        name = input("Enter the file of your name: ")
+        p = Path(name)
+        if p.exists() and p.is_file():
+            with open(p,'r') as f:
+                data = f.read()
+                print(data)
+            print("Readed Successfully")
+        else:
+            print(f'{name} - this file is not exist')
+    except Exception as err:
+        print(f"You have got an unexpected error: {err}")
