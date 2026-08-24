@@ -8,3 +8,4 @@ for i in range(1,choice+1):
 
 double = map(lambda x:x*2,new_list)
 print(f'The double of each number from the given list is: {list(double)}')
+
