@@ -23,6 +23,7 @@ else:
 
 
 # Take two lists from the user (same length). Print the greater value at each index. 
+print("Greater value at each index:")
 
 for i in range(choice):
     if list_one[i]>list_two[i]:
