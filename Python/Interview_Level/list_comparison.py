@@ -19,3 +19,13 @@ elif (sum(list_one))==(sum(list_two)):
     print("Both list has same value")
 else:
     print(f'This is the list with highest value: {list_two}')
+
+
+
+# Take two lists from the user (same length). Print the greater value at each index. 
+
+for i in range(choice):
+    if list_one[i]>list_two[i]:
+        print(list_one[i],end = " ")
+    else:
+        print(list_two[i],end = " ")
