@@ -44,6 +44,9 @@ def passed_students(data):
             print(name, "-", mark)
 
 
+
+
 highest_scorer(students)
 lowest_scorer(students)
 average_score(students)
+passed_students(students)
