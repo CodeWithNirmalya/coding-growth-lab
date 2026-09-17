@@ -36,6 +36,12 @@ def average_score(data):
     print("Average Marks:", round(avg, 2))
 
 
+# Passed Students
+def passed_students(data):
+    print("Passed Students:")
+    for name, mark in data.items():
+        if mark >= 40:
+            print(name, "-", mark)
 
 
 highest_scorer(students)
